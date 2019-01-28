@@ -7,8 +7,8 @@ class ApplicationController < Sinatra::Base
     end
 
     get '/gossips/:id/' do
-        gossip_selected = Gossip.find(params[:id])
-        erb :gossip_with_index, locals: {gossips: gossip_selected}
+      gossip_selected = Gossip.find(params[:id])
+      erb :gossip_with_index, locals: {gossips: gossip_selected}
     end
 
     get '/gossips/new/' do
